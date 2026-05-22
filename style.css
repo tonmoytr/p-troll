@@ -529,6 +529,7 @@ img {
     white-space: nowrap;
     margin-right: 1rem;
     flex-grow: 1;
+    min-width: 0; /* Prevents overflow in flex layouts by allowing the element to shrink */
 }
 .ca-copy-btn {
     background: var(--color-primary);
@@ -1168,14 +1169,20 @@ section {
     .hero-image-container {
         width: 250px;
         height: 250px;
+        max-width: 70vw;
+        max-height: 70vw;
     }
     .portal-ring {
         width: 310px;
         height: 310px;
+        max-width: 90vw;
+        max-height: 90vw;
     }
     .portal-glow {
         width: 280px;
         height: 280px;
+        max-width: 80vw;
+        max-height: 80vw;
     }
     
     /* Grid changes */
@@ -1224,8 +1231,21 @@ section {
 }
 
 @media (max-width: 480px) {
+    .hero-container {
+        padding: 0 1rem; /* More horizontal space for hero elements */
+    }
+    .badge-pill {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-size: 0.7rem;
+        padding: 0.35rem 0.8rem;
+        max-width: 100%;
+        text-align: center;
+        justify-content: center;
+        white-space: normal;
+    }
     .hero-title {
-        font-size: 3.5rem;
+        font-size: clamp(2.3rem, 11vw, 3.5rem);
+        word-break: break-word;
     }
     .btn-lg {
         padding: 0.8rem 2rem;

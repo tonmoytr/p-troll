@@ -1177,6 +1177,34 @@ section {
   align-items: flex-start;
 }
 
+.footer-email {
+  margin-top: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  transition: var(--transition-smooth);
+  font-family: var(--font-body);
+}
+
+.footer-email:hover {
+  color: var(--color-primary-light);
+  text-shadow: 0 0 8px var(--color-primary-glow);
+}
+
+.footer-email .email-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary-light);
+  transition: var(--transition-smooth);
+}
+
+.footer-email:hover .email-icon {
+  color: var(--color-secondary);
+  transform: scale(1.1);
+}
+
 .footer-divider {
   height: 1px;
   background: rgba(255, 255, 255, 0.05);

@@ -376,6 +376,16 @@ img {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px var(--color-primary-glow);
 }
+.social-btn img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: var(--transition-smooth);
+}
+.social-btn:hover img {
+  transform: scale(1.1);
+}
 .icon-svg {
   width: 20px;
   height: 20px;
